@@ -13,7 +13,7 @@ Multiple failed SSH login attempts were detected from a single external IP addre
 ---
 
 ### Evidence
-![Raw failed logins](SOC-Alert-Triage/ActivityScreenshots/rawfailedlogins.png)
+![Raw failed logins](SOC-Alert-Triage-Investigation/ActivityScreenshots/rawfailedlogins.png)
 
 
 ---
