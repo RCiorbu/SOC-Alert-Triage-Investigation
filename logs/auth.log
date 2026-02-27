@@ -1,0 +1,18 @@
+2025-08-02T09:02:12Z sshd[1024]: Accepted password for jdoe from 192.0.2.45 port 49152 ssh2
+2025-08-02T09:03:15Z sshd[1027]: Failed password for invalid user admin from 198.51.100.23 port 40211 ssh2
+2025-08-02T09:04:05Z sshd[1031]: Failed password for invalid user admin from 198.51.100.23 port 40212 ssh2
+2025-08-02T09:04:50Z sshd[1034]: Failed password for invalid user admin from 198.51.100.23 port 40213 ssh2
+2025-08-02T09:05:30Z sshd[1037]: Failed password for invalid user admin from 198.51.100.23 port 40214 ssh2
+2025-08-02T09:06:02Z sshd[1041]: Failed password for invalid user admin from 198.51.100.23 port 40215 ssh2
+2025-08-02T09:07:10Z sshd[1046]: Accepted password for svc_backup from 203.0.113.12 port 32911 ssh2
+2025-08-02T09:12:01Z webapp[2105]: auth: login failure user=jdoe ip=203.0.113.12 method=password
+2025-08-02T09:12:43Z webapp[2108]: auth: login success user=jdoe ip=203.0.113.12 method=password
+2025-08-02T09:18:58Z sshd[1102]: Failed password for jdoe from 198.51.100.23 port 40321 ssh2
+2025-08-02T09:19:05Z sshd[1105]: Failed password for jdoe from 198.51.100.23 port 40322 ssh2
+2025-08-02T09:19:30Z sshd[1107]: Accepted password for jdoe from 198.51.100.23 port 40323 ssh2
+2025-08-02T09:30:12Z systemd[1]: user jdoe started suspicious process /usr/bin/pspy
+2025-08-02T09:32:00Z sshd[1122]: Failed password for jdoe from 192.0.2.67 port 40400 ssh2
+2025-08-02T09:35:12Z sudo: jdoe : TTY=pts/2 ; PWD=/home/jdoe ; USER=root ; COMMAND=/usr/bin/id
+2025-08-02T09:35:20Z curl[5023]: http POST to https://bad.example.com/api/upload by user jdoe
+2025-08-02T09:36:12Z sshd[1130]: Accepted password for svc_backup from 203.0.113.12 port 32912 ssh2
+2025-08-02T09:40:00Z sshd[1140]: Failed password for invalid user admin from 198.51.100.23 port 40500 ssh2
