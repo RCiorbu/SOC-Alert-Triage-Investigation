@@ -13,3 +13,32 @@ Multiple failed SSH login attempts were detected from a single external IP addre
 ---
 
 ## Evidence
+![Raw failed logins](ActivityScreenshots/rawfailedlogins.png)
+
+---
+
+## Triage Actions
+- Reviewed authentication logs in Splunk
+- Extracted source IP and targeted usernames
+- Counted frequency of login attempts
+- Confirmed repeated automated authentication behavior
+
+---
+
+## Analysis
+The pattern of authentication attempts indicates automated password guessing rather than legitimate user activity.
+
+No successful login events were observed in the dataset.
+
+---
+
+## Conclusion
+True Positive — External brute-force authentication attempt
+
+---
+
+## Recommended Response
+- Block IP 198.51.100.23 at firewall
+- Continue monitoring for repeated attempts
+- Implement account lockout threshold
+- Recommend MFA for remote authentication
