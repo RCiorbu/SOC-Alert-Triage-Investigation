@@ -1,35 +1,31 @@
 # SOC Alert Triage & Investigation (Splunk-style)
 
-## TL;DR (read this first — hiring managers will)
-Simulated Tier-1 SOC investigation: detected a brute-force authentication campaign that escalated to a confirmed compromised account. The repo includes sample auth logs, Splunk search examples (SPL), a detection rule, an analyst triage ticket, and a final incident closeout that shows containment and recommended next steps.
+# SOC Alert Investigation — SSH Brute-Force Activity
 
-**Skills demonstrated:** alert triage, SPL search, log analysis, timeline building, containment recommendations, analyst write-ups.
+## Overview
+During log monitoring, repeated failed SSH authentication attempts were identified from a single external IP address targeting multiple user accounts.
+
+Analysis showed automated login behavior consistent with a brute-force attack. A detection rule was created to identify repeated authentication failures from the same source.
+
+## What I Did
+- Reviewed authentication logs in Splunk
+- Extracted usernames and source IP using field parsing
+- Measured login frequency to confirm attack pattern
+- Built a threshold-based detection rule
+- Documented findings and recommended monitoring action
+
+## Environment
+SIEM: Splunk  
+Log Source: Linux auth.log  
+Attack Type: SSH brute-force attempt
+
+## Detection Logic
+Alert triggers when ≥5 failed login attempts originate from the same IP address.
+
+## Result
+The attacker source was identified and a reusable detection was created for SOC monitoring.
 
 ---
-
-## Files in this repo
-- `logs/auth.log` — realistic sample authentication logs (SFTP/SSH/web auth style)
-- `splunk/splunk_searches.md` — SPL queries and saved search configs
-- `splunk/detection_rule.conf` — example detection rule for SIEM
-- `investigation/ANALYST_TICKET.md` — triage ticket filled with evidence & actions
-- `investigation/CLOSEOUT.md` — final incident write-up (timeline, root cause, remediation)
-- `assets/run_in_splunk.txt` — quick instructions to ingest logs into Splunk
-
----
-
-## How to use
-1. Spin up Splunk Free (local) or use an existing Splunk instance.
-2. Ingest `logs/auth.log` (see `assets/run_in_splunk.txt` for quick method).
-3. Run the provided SPL queries in `splunk/splunk_searches.md`.
-4. Use `investigation/ANALYST_TICKET.md` as your step-by-step triage and fill in evidence.
-5. Publish the `CLOSEOUT.md` as the final case report.
-
----
-
-## Hiring note
-When you review my work, look for the "Investigation → Evidence → Action" flow:
-- Detection (alert) → Investigation (logs & searches) → Determination (true/false positive) → Containment → Closeout.
-
 
 ## Quick evidence (see images)
 
