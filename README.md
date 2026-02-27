@@ -31,3 +31,8 @@ When you review my work, look for the "Investigation → Evidence → Action" fl
 - Detection (alert) → Investigation (logs & searches) → Determination (true/false positive) → Containment → Closeout.
 
 If you'd like, I can adapt these searches to Splunk ES correlation searches or to other SIEMs (QRadar/Elastic/Datadog).
+## Quick evidence (see images)
+![Raw failed logins]
+![Parsed fields table]
+![Attack leaderboard]
+![Alert rule logic / saved search]
