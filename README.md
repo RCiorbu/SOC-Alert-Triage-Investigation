@@ -30,9 +30,20 @@ Simulated Tier-1 SOC investigation: detected a brute-force authentication campai
 When you review my work, look for the "Investigation → Evidence → Action" flow:
 - Detection (alert) → Investigation (logs & searches) → Determination (true/false positive) → Containment → Closeout.
 
-If you'd like, I can adapt these searches to Splunk ES correlation searches or to other SIEMs (QRadar/Elastic/Datadog).
+
 ## Quick evidence (see images)
-![Raw failed logins]
-![Parsed fields table]
-![Attack leaderboard]
-![Alert rule logic / saved search]
+
+### Raw failed logins
+![Raw failed logins](ActivityScreenshots/rawfailedlogins.png)
+
+### Parsed fields table
+![Parsed fields table](ActivityScreenshots/parsedfields.png)
+
+### Attack leaderboard
+![Attack leaderboard](ActivityScreenshots/stats.png)
+
+### Detection rule
+![Detection rule](ActivityScreenshots/Detection%20Rule.png)
+
+### Alert logic / saved search
+![Alert rule logic](ActivityScreenshots/Alert%20logic.png)
