@@ -1,0 +1,7 @@
+Quick local ingest (Splunk Free / Enterprise)
+1) Install Splunk (Free) on your laptop or VM: https://www.splunk.com (choose Free or Enterprise trial)
+2) Start Splunk and log into the web UI (default: http://localhost:8000)
+3) Settings → Add Data → Upload → select this repo's logs/auth.log → set sourcetype to syslog and index=main → Submit
+4) Run the SPL queries in splunk/splunk_searches.md in Search & Reporting
+Alternative (fast, no Splunk):
+- Use `grep` and simple parsing to reproduce the analysis locally, or write a short Python script to parse `logs/auth.log`.
